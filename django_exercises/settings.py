@@ -33,6 +33,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    "last_of_group",
     "retrieve_default_row",
     "django.contrib.admin",
     "django.contrib.auth",
