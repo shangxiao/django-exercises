@@ -2,9 +2,8 @@ from .models import Setting
 
 
 def get_setting():
-    setting = Setting.objects.filter(is_default=True).first()
-
-    if not setting:
-        setting = Setting.objects.first()
-
-    return setting
+    """
+    Lessons:
+        1. Use ORDER BY to return rows in a preferred order, eliminating unnecessary queries
+    """
+    return Setting.objects.order_by("-is_default").first()
